@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+
+<% if(posts.length === 0) { %>
+
+    <p>No posts yet.</p>
+
+<% } else { %>
+
+    <% posts.forEach(post => { %>
+
+        <div class="post-card">
+
+            <h3><%= post.title %></h3>
+
+            <p>
+                <%= post.content %>
+            </p>
+
+        </div>
+
+    <% }) %>
+
+<% } %>
+
+<%- include("partials/footer.ejs") %>
